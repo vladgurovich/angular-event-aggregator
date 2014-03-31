@@ -15,10 +15,10 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      "bower_components/angular/angular.min.js",
-      "bower_components/angular-mocks/angular-mocks.js",
-      'angular-event-aggregator.min.js',
-      'test/angular-event-aggregator-spec.js'
+      "../bower_components/angular/angular.min.js",
+      "../bower_components/angular-mocks/angular-mocks.js",
+      '../angular-event-aggregator.min.js',
+      'angular-event-aggregator-spec.js'
     ],
 
 

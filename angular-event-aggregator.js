@@ -24,9 +24,9 @@
           callbacks.splice(i,1);
         }
       }
-      
+
       if (callbacks.length === 0) {
-        delete callbacks;
+        delete _eventsWithCallbacks[event];
       }
     }
 
