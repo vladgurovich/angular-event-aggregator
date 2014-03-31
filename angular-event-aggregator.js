@@ -24,6 +24,10 @@
           callbacks.splice(i,1);
         }
       }
+      
+      if (_eventlisteners[eventName].length === 0) {
+        delete _eventlisteners[eventName];
+      }
     }
 
     function trigger(event, eventObject) {
