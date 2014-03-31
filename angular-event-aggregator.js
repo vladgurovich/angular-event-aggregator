@@ -1,36 +1,36 @@
 (function(window, angular, undefined) {
   'use strict';
-   // declaring the module in one file / anonymous function
-   angular.module('ngEventAggregator', [])
-   .factory('eventAggregator', [ function () {
-    var _eventListeners;
+  angular.module('ngEventAggregator', [])
+  .factory('eventAggregator', [ function () {
 
-    function on(eventName, callback) {
-      if(angular.isUndefined(_eventListeners)) {
-        _eventListeners = {};
+    var _eventsWithCallbacks;
+
+    function on(event, callback) {
+      if(angular.isUndefined(_eventsWithCallbacks)) {
+        _eventsWithCallbacks = {};
       }
-      var eventListeners = _eventListeners[eventName] || (_eventListeners[eventName] = []);
-      eventListeners.push(callback);
+      var callbacks = _eventsWithCallbacks[event] || (_eventsWithCallbacks[event] = []);
+      callbacks.push(callback);
     }
 
-    function off(eventName, callback){
-      var eventListeners = _eventListeners[eventName];
-      if(angular.isUndefined(eventListeners)) {
+    function off(event, callback){
+      var callbacks = _eventsWithCallbacks[event];
+      if(angular.isUndefined(callbacks)) {
         return;
       }
       //iterating in reverse avoids problems when removing items
-      for (var i = eventListeners.length - 1; i >= 0; --i) {
-        if(eventListeners[i] === callback){
-          eventListeners.splice(i,1);
+      for (var i = callbacks.length - 1; i >= 0; --i) {
+        if(callbacks[i] === callback){
+          callbacks.splice(i,1);
         }
       }
     }
 
-    function trigger(eventName, eventObject) {
-      var eventListeners = _eventListeners[eventName];
-      if(angular.isDefined(eventListeners)) {
-        for (var i = 0; i < eventListeners.length;  i++) {
-          eventListeners[i](eventObject);
+    function trigger(event, eventObject) {
+      var callbacks = _eventsWithCallbacks[event];
+      if(angular.isDefined(callbacks)) {
+        for (var i = 0; i < callbacks.length;  i++) {
+          callbacks[i](eventObject);
         }
       }
     }
