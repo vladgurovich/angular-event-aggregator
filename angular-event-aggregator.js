@@ -25,8 +25,8 @@
         }
       }
       
-      if (_eventlisteners[eventName].length === 0) {
-        delete _eventlisteners[eventName];
+      if (_eventsWithCallbacks[event].length === 0) {
+        delete _eventsWithCallbacks[event];
       }
     }
 
