@@ -3,12 +3,9 @@
   angular.module('ngEventAggregator', [])
   .factory('eventAggregator', [ function () {
 
-    var _eventsWithCallbacks;
+    var _eventsWithCallbacks = {};
 
     function on(event, callback) {
-      if(angular.isUndefined(_eventsWithCallbacks)) {
-        _eventsWithCallbacks = {};
-      }
       var callbacks = _eventsWithCallbacks[event] || (_eventsWithCallbacks[event] = []);
       callbacks.push(callback);
     }
