@@ -23,6 +23,7 @@
   "ignore": [
     "karma.conf.js",
     "package.json",
+    ".gitignore",
     "node_modules",
     "bower_components",
     "test"
