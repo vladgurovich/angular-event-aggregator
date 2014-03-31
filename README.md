@@ -32,3 +32,9 @@ app.controller("SomeOtherCtrl", ['eventAggregator', function(eventAggregator){
 }]);
 ```
 
+## Testing
+
+In order to run the unit tests, run `bower install` to get angular dependencies and `npm install` to get karma and related dependecies.
+
+Run `karma start' to launch karma.
+

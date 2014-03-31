@@ -1,0 +1,29 @@
+{
+  "name": "angular-event-aggregator",
+  "main": "angular-event-aggregator.min.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/vladgurovich/angular-event-aggregator",
+  "authors": [
+    "Vlad Gurovich"
+  ],
+  "description": "scope-independent AngularJS Event Aggregator",
+  "keywords": [
+    "angular",
+    "angularjs",
+    "event",
+    "aggregator"
+  ],
+  "dependencies": {
+    "angular": "~1.2"
+  },
+  "devDependecies": {
+    "angular-mocks": "~1.2"
+  },
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ]
+}

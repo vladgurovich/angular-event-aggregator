@@ -9,10 +9,9 @@
       if(angular.isUndefined(_eventListeners)) {
         _eventListeners = {};
       }
-      var eventListeners = _eventListeners[eventName] || (_eventListeners[name] = []);
+      var eventListeners = _eventListeners[eventName] || (_eventListeners[eventName] = []);
       eventListeners.push(callback);
     }
-
 
     function off(eventName, callback){
       var eventListeners = _eventListeners[eventName];
@@ -30,8 +29,8 @@
     function trigger(eventName, eventObject) {
       var eventListeners = _eventListeners[eventName];
       if(angular.isDefined(eventListeners)) {
-        for (var i = 0; i < eventListenerslength - 1;  i++) {
-          _eventlisteners[eventName][i](eventObject);
+        for (var i = 0; i < eventListeners.length;  i++) {
+          eventListeners[i](eventObject);
         }
       }
     }
@@ -42,4 +41,4 @@
       trigger: trigger
     };
    }]);
-})(window, window.angular);
+})(window, angular);

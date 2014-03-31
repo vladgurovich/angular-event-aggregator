@@ -1,0 +1,28 @@
+{
+  "name": "angular-event-aggregator",
+  "version": "0.0.1",
+  "description": "scope-independent AngularJS Event Aggregator",
+  "main": "angular-event-aggregator.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "karma start test/karma.conf.js --single-run",
+    "test-watch": "karma start test/karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/vladgurovich/angular-event-aggregator.git"
+  },
+  "author": "Vlad Gurovich",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "devDependencies": {
+    "karma-script-launcher": "~0.1.0",
+    "karma-jasmine": "~0.1.5",
+    "karma-phantomjs-launcher": "~0.1.2",
+    "karma": "^0.12.1",
+    "phantomjs": "~1.9.7-1",
+    "uglify-js": "~2.4"
+  }
+}
