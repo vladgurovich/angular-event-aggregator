@@ -1,7 +1,7 @@
 angular-event-aggregator
 ================
 
-scope-independent AngularJS Event Aggregator service inspired by Backbones event aggregator.
+$digest-free Event Aggregator for AngularJS inspired by Backbone's event aggregator.
 
 ## Usage
 
